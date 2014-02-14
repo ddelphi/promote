@@ -1,0 +1,61 @@
+
+-$faviconLink = "favicon.ico"
+-$styleLink = "style.css"
+
+
+
+
+
+!!! 5
+%html
+	%head
+		%title sparkle
+		%meta(charset="utf-8")
+		%meta(name="description" content="the site for self promotion.")
+		%meta(name="keywords" content="sparkle, cv, self, promotion")
+		%meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		%link(rel="shortcut icon" href=$faviconLink)
+		%link(rel="stylesheet" type="text/css" href=$styleLink)
+	
+	%body
+		.body-wrapper
+			.main
+				.section
+					.span1of1
+						.m-promo-image
+							.wrapper
+								.img
+				.section
+					.span1of2
+						.m-promo-info
+							.wrapper
+								.content
+									.text
+										%span.cfont-highlight-2 I am a frontend developer. 
+										As the title indicates, I can do coding about HTML, CSS, Javascript, or some relate technique such as HTML preprocessor HAML, CSS preprocessor SASS and jQuery.
+									.text
+										This is the simple page for promoting myself. I like simple, simple concept, simple design such as flat design with limit color tone.
+					.span1of2
+						.m-promo-info
+							.wrapper
+								.content
+									.text
+										This site is coded with HAML and SASS preprocessor. HAML and SASS are the similar preprocessor for HTML and CSS. Their concept are the same, that is making markup language beautiful. Other than just write the code in simple tree like style, you can utilize the parameter function provided by them. So you can structure your markup code more beautiful.
+									.text
+										There are some project that I have created. Currently two javascript projects have been settled in the github, one is a 
+										%span.cfont-highlight-1 N-Back game
+										, another is the 
+										%span.cfont-highlight-1 google image serach 
+										script. If you are interested in them, you can access them by the link label below.
+						.m-quick-link
+							.wrapper
+								%li.item.m-media-block.m-icon-box
+									.img.icon-github
+									.content
+										%a(href="http://github.com/ddelphi") github / ddelphi
+								%li.item.m-media-block.m-icon-box
+									.img.icon-email
+									.content
+										%a(href="mailto:ddelphi@163.com") email
+						.m-eof
+							.content

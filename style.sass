@@ -1,0 +1,327 @@
+
+
+// layout params
+$siteWidth: 600px
+$pageWidth: 600px
+$gutter: 20px
+$siteBackground: #3F4242
+
+// normalize params
+$linkNormalColor: #FFAA6A
+$linkVisitedColor: #FFAA6A
+$linkHoverColor: #FFD9BD
+$linkActiveColor: #FFAA6A
+
+$color: #E5E5E5
+$quoteColor: #B3B3B3
+$hTitleColor: #50AB1E
+$color_content_p: #E5E5E5
+
+
+// custom
+$promo-image: url(promo_bg.jpg)
+
+
+// functions
+@mixin boxSizing($box)
+	-webkit-box-sizing: $box
+	-moz-box-sizing: $box
+	box-sizing: $box
+
+@mixin boxShadow($shadows...)
+	-webkit-box-shadow: $shadows
+	-moz-box-shadow: $shadows
+	box-shadow: $shadows
+
+@mixin borderRadius($radius...)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+
+@mixin textShadow($shadows...)
+	-webkit-text-shadow: $shadows
+	-moz-text-shadow: $shadows
+	text-shadow: $shadows
+
+@mixin floatFix()
+	*display: inline
+
+@mixin floatContainerFix()
+	overflow: hidden
+	*zoom: 1
+
+@mixin floatLeftSiblingFix()
+	*position: relative
+	*left: -3px
+	*margin-right: -3px
+
+@mixin bePositioner()
+	position: relative
+
+
+
+
+
+
+
+/* reset */
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section
+	margin: 0
+	padding: 0
+	border: 0
+article, aside, dialog, figure, footer, header, hgroup, nav, section
+	display: block
+ul, ol, li
+	list-style: none
+table
+	border-collapse: separate
+	border-spacing: 0
+caption, th, td
+	text-align: left
+	font-weight: normal
+	float: none !important
+table, th, td
+	vertical-align: middle
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+blockquote, q
+	quotes: "" ""
+a img
+	border: none
+
+
+
+/* normalize */
+// general
+body
+	margin: 0 auto
+	width: auto
+	background: $siteBackground
+	font: 13px/1.2 Arial, Tahoma
+	color: $color
+
+// link
+a
+	text-decoration: none
+a:link
+	color: $linkNormalColor
+a:visited
+	color: $linkVisitedColor
+a:hover
+	color: $linkHoverColor
+a:active
+	color: $linkActiveColor
+
+// text
+h1, h2, h3, h4, h5, h6
+	font-weight: bold
+	color: $hTitleColor
+h1
+	font-size: 38px
+h2
+	font-size: 30px
+h3
+	font-size: 22px
+h4
+	font-size: 16px
+h5
+	font-size: 14px
+h6
+	font-size: 12px
+
+p
+	margin-bottom: 14px
+	color: $color_content_p
+strong, em
+	font-weight: bold
+
+q, blockquote
+	padding: 20px 30px
+	color: $quoteColor
+	font-style: italic
+
+// list
+ul, ol
+	padding: 0
+li
+	@include floatFix()
+
+// table
+
+// form
+
+
+
+
+
+
+/* layout */
+.body-wrapper
+	overflow: hidden
+	width: auto
+	background: $siteBackground
+
+.main
+	overflow: hidden
+	margin-left: 30px
+	padding-bottom: 40px
+	width: $pageWidth
+
+.section
+	//overflow: hidden
+	margin-left: -$gutter
+	*zoom: 1
+.section:after
+	clear: both
+.section:before, .s:after
+	display: table
+	line-height: 0
+	content: ""
+
+// fluid grids
+.span1of1, .span1of2, .span1of3, .span2of3, .span1of4, .span3of4, .span1of5, .span2of5, .span3of5, .span4of5
+	float: left
+	overflow: hidden
+	*display: inline
+
+.span1of1
+	float: none
+.span1of2
+	width: 50%
+.span1of3
+	width: 33.33333%
+.span2of3
+	width: 66.66666%
+.span1of4
+	width: 25%
+.span3of4
+	width: 75%
+.span1of5
+	width: 20%
+.span2of5
+	width: 40%
+.span3of5
+	width: 60%
+.span4of5
+	width: 80%
+.lastUnit
+	float: none
+	overflow: hidden
+	width: auto
+
+
+
+
+
+
+/* mod */
+.m-media-block
+	overflow: hidden
+
+	.img
+		float: left
+	.content
+		float: left
+		margin-left: 10px
+
+
+
+/* custom */
+.m-promo-image
+	.wrapper
+		padding: 0
+	
+	.img
+		margin-left: 40px
+		width: 600px
+		height: 300px
+		background-image: $promo-image
+		background-repeat: no-repeat
+
+.m-promo-info
+	.wrapper
+		margin-top: 18px
+		padding: 0 42px
+	
+	.content
+		.text
+			margin-bottom: 26px
+
+.m-quick-link
+	a, a:link, a:visited, a:active
+		color: #78F5DC
+	a:hover
+		color: #ffab66
+
+	.wrapper
+		margin-top: 18px
+		padding: 0 42px
+	.item
+		margin-bottom: 8px
+
+.m-icon-box
+	.img
+		width: 34px
+		height: 34px
+	.content
+		margin-top: 7px
+
+.m-eof
+	.content
+		color: #333
+
+// icons
+.icon-github
+	background: url(icon-github.jpg) no-repeat
+.icon-email
+	background: url(icon-email.jpg) no-repeat
+
+// custom font
+.cfont-highlight-1
+	color: #FFAB66
+.cfont-highlight-2
+	color: #FFF
+	font-weight: bold
+
+
+
+
+
+
+/*  helpers  */
+.cl-f
+	*zoom: 1
+.cl-f:after
+	clear: both
+.cl-f:before, .cl-f:after
+	display: table
+	content: ""
+	line-height: 0
+.cl-l
+	clear: left
+.cl-r
+	clear: right
+.cl-b
+	clear: both
+.fl-l
+	float: left
+.fl-r
+	float: right
+.pos-r
+	position: relative
+.pos-a
+	position: absolute
+.dir-r
+	direction: rtl
+.text-l
+	text-align: left
+.text-c
+	text-align: center
+.text-r
+	text-align: right
+.mg-h0
+	margin-left: 0
+	margin-right: 0
+.mg-v0
+	margin-top: 0
+	margin-bottom: 0
