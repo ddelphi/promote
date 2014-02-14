@@ -1,0 +1,269 @@
+/* reset */
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+ul, ol, li {
+  list-style: none; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  float: none !important; }
+
+table, th, td {
+  vertical-align: middle; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a img {
+  border: none; }
+
+/* normalize */
+body {
+  margin: 0 auto;
+  width: auto;
+  background: #3f4242;
+  font: 13px/1.2 Arial, Tahoma;
+  color: #e5e5e5; }
+
+a {
+  text-decoration: none; }
+
+a:link {
+  color: #ffaa6a; }
+
+a:visited {
+  color: #ffaa6a; }
+
+a:hover {
+  color: #ffd9bd; }
+
+a:active {
+  color: #ffaa6a; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #50ab1e; }
+
+h1 {
+  font-size: 38px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+p {
+  margin-bottom: 14px;
+  color: #e5e5e5; }
+
+strong, em {
+  font-weight: bold; }
+
+q, blockquote {
+  padding: 20px 30px;
+  color: #b3b3b3;
+  font-style: italic; }
+
+ul, ol {
+  padding: 0; }
+
+li {
+  *display: inline; }
+
+/* layout */
+.body-wrapper {
+  overflow: hidden;
+  width: auto;
+  background: #3f4242; }
+
+.main {
+  overflow: hidden;
+  margin-left: 30px;
+  padding-bottom: 40px;
+  width: 600px; }
+
+.section {
+  margin-left: -20px;
+  *zoom: 1; }
+
+.section:after {
+  clear: both; }
+
+.section:before, .s:after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.span1of1, .span1of2, .span1of3, .span2of3, .span1of4, .span3of4, .span1of5, .span2of5, .span3of5, .span4of5 {
+  float: left;
+  overflow: hidden;
+  *display: inline; }
+
+.span1of1 {
+  float: none; }
+
+.span1of2 {
+  width: 50%; }
+
+.span1of3 {
+  width: 33.33333%; }
+
+.span2of3 {
+  width: 66.66666%; }
+
+.span1of4 {
+  width: 25%; }
+
+.span3of4 {
+  width: 75%; }
+
+.span1of5 {
+  width: 20%; }
+
+.span2of5 {
+  width: 40%; }
+
+.span3of5 {
+  width: 60%; }
+
+.span4of5 {
+  width: 80%; }
+
+.lastUnit {
+  float: none;
+  overflow: hidden;
+  width: auto; }
+
+/* mod */
+.m-media-block {
+  overflow: hidden; }
+  .m-media-block .img {
+    float: left; }
+  .m-media-block .content {
+    float: left;
+    margin-left: 10px; }
+
+/* custom */
+.m-promo-image .wrapper {
+  padding: 0; }
+.m-promo-image .img {
+  margin-left: 40px;
+  width: 600px;
+  height: 300px;
+  background-image: url(promo_bg.jpg);
+  background-repeat: no-repeat; }
+
+.m-promo-info .wrapper {
+  margin-top: 18px;
+  padding: 0 42px; }
+.m-promo-info .content .text {
+  margin-bottom: 26px; }
+
+.m-quick-link a, .m-quick-link a:link, .m-quick-link a:visited, .m-quick-link a:active {
+  color: #78f5dc; }
+.m-quick-link a:hover {
+  color: #ffab66; }
+.m-quick-link .wrapper {
+  margin-top: 18px;
+  padding: 0 42px; }
+.m-quick-link .item {
+  margin-bottom: 8px; }
+
+.m-icon-box .img {
+  width: 34px;
+  height: 34px; }
+.m-icon-box .content {
+  margin-top: 7px; }
+
+.m-eof .content {
+  color: #333333; }
+
+.icon-github {
+  background: url(icon-github.jpg) no-repeat; }
+
+.icon-email {
+  background: url(icon-email.jpg) no-repeat; }
+
+.cfont-highlight-1 {
+  color: #ffab66; }
+
+.cfont-highlight-2 {
+  color: white;
+  font-weight: bold; }
+
+/*  helpers  */
+.cl-f {
+  *zoom: 1; }
+
+.cl-f:after {
+  clear: both; }
+
+.cl-f:before, .cl-f:after {
+  display: table;
+  content: "";
+  line-height: 0; }
+
+.cl-l {
+  clear: left; }
+
+.cl-r {
+  clear: right; }
+
+.cl-b {
+  clear: both; }
+
+.fl-l {
+  float: left; }
+
+.fl-r {
+  float: right; }
+
+.pos-r {
+  position: relative; }
+
+.pos-a {
+  position: absolute; }
+
+.dir-r {
+  direction: rtl; }
+
+.text-l {
+  text-align: left; }
+
+.text-c {
+  text-align: center; }
+
+.text-r {
+  text-align: right; }
+
+.mg-h0 {
+  margin-left: 0;
+  margin-right: 0; }
+
+.mg-v0 {
+  margin-top: 0;
+  margin-bottom: 0; }
